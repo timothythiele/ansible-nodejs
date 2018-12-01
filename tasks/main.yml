@@ -1,8 +1,8 @@
 ---
 # tasks file for nodejs
-- import_playbook: nodepub.yml
-- import_playbook: osarch.yml
-- import_playbook: nodejs.yml
+- include_tasks: nodepub.yml
+- include_tasks: osarch.yml
+- include_tasks: nodejs.yml
 - name: Install global npm packages
   npm: global=yes name={{ item }} state=present
   with_items: "{{ nodejs_global_packages }}"
