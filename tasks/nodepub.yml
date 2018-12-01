@@ -1,17 +1,25 @@
 ---
 - include_vars: node12.yml
+  name: Load node 12 vars
   when: nodejs_version.startswith("0.12.")
 - include_vars: node10.yml
+  name: Load node 10 vars
   when: nodejs_version.startswith("0.10.")
 - include_vars: node4x.yml
+  name: Load node 4 vars
   when: nodejs_version.startswith("4.")
 - include_vars: node5x.yml
+  name: Load node 5 vars
   when: nodejs_version.startswith("5.")
 - include_vars: node6x.yml
+  name: Load node 6 vars
   when: nodejs_version.startswith("6.")
 - include_vars: node7x.yml
+  name: Load node 7 vars
   when: nodejs_version.startswith("7.")
 - include_vars: node8x.yml
+  name: Load node 8 vars
   when: nodejs_version.startswith("8.")
 - fail: 'msg="supported nodejs_version are 0.10, 0.12, 4, 5, 6, 7 or 8"'
+  name: Failed to find supported version of nodejs
   when: nodejs_source_pub is not defined
