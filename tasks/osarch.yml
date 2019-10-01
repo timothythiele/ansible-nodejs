@@ -4,6 +4,7 @@
   with_first_found:
     - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
     - defaultos.yml
-- fail: msg="os or architecture not supported"
+- fail:
+    msg: "os or architecture not supported"
   name: Unsupported architecture
   when: nodejs_source_path_parts[ansible_userspace_architecture] is not defined

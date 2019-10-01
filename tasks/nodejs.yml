@@ -9,8 +9,8 @@
       }}
     state: present
 - name: Install nodejs and development tools
-  yum: name={{item}}
-  with_items:
-    - nodejs
-    - gcc-c++
-    - make
+  yum:
+    name:
+      - nodejs
+      - gcc-c++
+      - make

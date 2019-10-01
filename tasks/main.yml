@@ -4,5 +4,8 @@
 - include_tasks: osarch.yml
 - include_tasks: nodejs.yml
 - name: Install global npm packages
-  npm: global=yes name={{ item }} state=present
+  npm:
+    global: yes
+    name: "{{ item }}"
+    state: present
   with_items: "{{ nodejs_global_packages }}"
