@@ -3,3 +3,4 @@
 nodejs_version: "8.16.1"
 nodejs_global_packages: []
 nodejs_source_url_base: "https://rpm.nodesource.com"
+nodejs_validate_certificates: yes

@@ -10,6 +10,7 @@
     state: present
 - name: Install nodejs and development tools
   yum:
+    validate_certs: {{ nodejs_validate_certificates }}
     name:
       - nodejs
       - gcc-c++
